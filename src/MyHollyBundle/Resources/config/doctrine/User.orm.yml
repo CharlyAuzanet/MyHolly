@@ -1,0 +1,12 @@
+MyHollyBundle\Entity\User:
+    type: entity
+    table: fos_user
+    repositoryClass: MyHollyBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+    lifecycleCallbacks: {  }

@@ -1,0 +1,7 @@
+/* 1. LAYOUT */
+/* line 1, ../sass/_layout.scss */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

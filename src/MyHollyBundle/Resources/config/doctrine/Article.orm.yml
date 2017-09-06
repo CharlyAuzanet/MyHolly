@@ -1,0 +1,22 @@
+MyHollyBundle\Entity\Article:
+    type: entity
+    table: null
+    repositoryClass: MyHollyBundle\Repository\ArticleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: '30'
+        text:
+            type: text
+
+    oneToOne:
+        picture:
+            targetEntity: MyHollyBundle\Entity\Picture
+            cascade: ['all']
+    lifecycleCallbacks: {  }

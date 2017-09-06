@@ -1,0 +1,26 @@
+{% extends '@MyHolly/layout.html.twig' %}
+
+{% block body %}
+    <div class="parallax-container">
+        <div class="parallax"><img src="{{ asset('bundles/myholly/images/wallpaperindex2.jpg') }}"></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <h1>Bienvenue sur MyHolly</h1>
+            <h3>Partagez vos photos avec vos proches gratuitement et en toute confidentialité</h3>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="{{ asset('bundles/myholly/images/wallpaperindex1.jpg') }}"></div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function(){
+            $('.parallax').parallax();
+        });
+    </script>
+
+{% endblock %}

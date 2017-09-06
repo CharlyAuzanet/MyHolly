@@ -1,0 +1,29 @@
+MyHollyBundle\Entity\Picture:
+    type: entity
+    table: null
+    repositoryClass: MyHollyBundle\Repository\PictureRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        src:
+            type: string
+            length: 255
+        alt:
+            type: string
+            length: 255
+    lifecycleCallbacks:
+        #For Create
+        prePersist: [ preUpload ]
+        postPersist: [ upload ]
+
+        #For edit
+        preUpdate: [ preUpload ]
+        postUpdate: [ upload ]
+
+        #For remove
+        preRemove: [ preRemove ]
+        postRemove: [ remove ]

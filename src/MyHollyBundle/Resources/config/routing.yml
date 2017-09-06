@@ -1,0 +1,11 @@
+my_holly_article:
+    resource: "@MyHollyBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+
+my_holly_index:
+    path:     /
+    defaults: { _controller: MyHollyBundle:Default:index }
+
+my_holly_filActu:
+    path:     /actu
+    defaults: { _controller: MyHollyBundle:Default:filActu }
