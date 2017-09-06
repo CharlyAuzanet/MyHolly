@@ -2,6 +2,7 @@
 
 namespace MyHollyBundle\Controller;
 
+use MyHollyBundle\Entity\Article;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
@@ -13,6 +14,12 @@ class DefaultController extends Controller
 
     public function filActuAction()
     {
-        return $this->render('@MyHolly/filActu.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $articles = $em->getRepository(Article::class)->findAll();
+
+        return $this->render('@MyHolly/filActu.html.twig', array(
+            'articles' => $articles
+        ));
     }
 }

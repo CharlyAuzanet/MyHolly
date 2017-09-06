@@ -5,3 +5,9 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+/* 2. FIL D'ACTU */
+/* line 1, ../sass/_filActu.scss */
+.containerArticle {
+  margin-top: 40px;
+}
